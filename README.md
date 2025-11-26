@@ -425,7 +425,7 @@ Usuario ─────────── Direccion (1:*)
 - **Network:** Pestaña Network para ver llamadas API (verificar que son peticiones REALES)
 - **Console:** Ver logs y posibles errores
 
-> 📄 **Ver guía completa:** `docs/criterio-10-integracion-demo.md`
+
 
 ---
 
@@ -457,7 +457,7 @@ criterio-03 criterio-04 criterio-05 criterio-06 criterio-07 criterio-08
 | CRUD inventario | Dashboard analytics |
 | Local dev | Deploy Vercel/Railway |
 
-> 📄 **Ver guía completa:** `docs/criterio-11-calidad-video-storytelling.md`
+
 
 ---
 
