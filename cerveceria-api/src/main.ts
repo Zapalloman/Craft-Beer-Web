@@ -26,10 +26,17 @@ async function bootstrap() {
         'http://127.0.0.1:3001',
       ];
       
+      // Agregar origins de producción desde variable de entorno
+      const prodOrigin = process.env.CORS_ORIGIN;
+      if (prodOrigin) {
+        allowedOrigins.push(...prodOrigin.split(',').map(o => o.trim()));
+      }
+      
       // Permitir peticiones sin origin (como Postman) o desde origins permitidos
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log('CORS blocked origin:', origin);
         callback(new Error('Not allowed by CORS'));
       }
     },
