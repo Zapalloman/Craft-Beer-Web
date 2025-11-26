@@ -18,18 +18,21 @@
 
 ## 📑 Índice de Presentación
 
-1. [Contexto del Proyecto](#1-contexto-del-proyecto)
-2. [Modelo de Negocio y Usuarios](#2-modelo-de-negocio-y-usuarios)
-3. [Épicas y Objetivos](#3-épicas-y-objetivos-de-negocio)
-4. [Historias de Usuario](#4-historias-de-usuario)
-5. [Mockups y Navegación](#5-mockups-y-navegación)
-6. [API y Contratos](#6-api-contracts)
-7. [Diagrama de Clases](#7-diagrama-de-clases)
-8. [Arquitectura de Componentes](#8-arquitectura-de-componentes)
-9. [Stack Tecnológico](#9-stack-tecnológico)
-10. [Demo de Integración](#10-demo-de-integración)
-11. [Seguridad Web (Bonus)](#bonus-seguridad-web)
-12. [Instalación y Ejecución](#instalación-y-ejecución)
+> **Estructura del video según rúbrica:** (1) Contexto rápido, (2) Camino de diseño, (3) Integración y demo, (4) Cierre
+
+1. [Contexto del Proyecto](#1-contexto-del-proyecto) ← Parte 1
+2. [Modelo de Negocio y Usuarios](#2-modelo-de-negocio-y-usuarios) ← Parte 2
+3. [Épicas y Objetivos](#3-épicas-y-objetivos-de-negocio) ← Parte 2
+4. [Historias de Usuario](#4-historias-de-usuario) ← Parte 2
+5. [Mockups y Navegación](#5-mockups-y-navegación) ← Parte 2
+6. [API y Contratos](#6-api-contracts) ← Parte 2
+7. [Diagrama de Clases](#7-diagrama-de-clases) ← Parte 2
+8. [Arquitectura de Componentes](#8-arquitectura-de-componentes) ← Parte 2
+9. [Stack Tecnológico](#9-stack-tecnológico) ← Parte 2
+10. [Demo de Integración](#10-demo-de-integración) ← Parte 3
+11. [Calidad del Video](#11-calidad-del-video-y-storytelling) ← Guía completa
+12. [Seguridad Web (Bonus)](#bonus-seguridad-web)
+13. [Instalación y Ejecución](#instalación-y-ejecución)
 
 ---
 
@@ -419,10 +422,42 @@ Usuario ─────────── Direccion (1:*)
 
 ### DevTools Tips
 - **Responsive:** F12 → Toggle device → iPhone 12 Pro (390px)
-- **Network:** Pestaña Network para ver llamadas API
+- **Network:** Pestaña Network para ver llamadas API (verificar que son peticiones REALES)
 - **Console:** Ver logs y posibles errores
 
-> 📄 **Ver guía completa:** `md/criterio-10-integracion-demo.md`
+> 📄 **Ver guía completa:** `docs/criterio-10-integracion-demo.md`
+
+---
+
+## 11. Calidad del Video y Storytelling
+
+### 🎬 Estructura del Video (4 Partes según Rúbrica)
+
+| Parte | Contenido | Tiempo |
+|-------|-----------|--------|
+| **1. Contexto** | Transferencia sushi → cervecería | 1-2 min |
+| **2. Diseño** | Épicas → Historias → Mockups → API → Clases → Componentes | 3-4 min |
+| **3. Demo** | Código + funcionamiento real + DevTools | 5-6 min |
+| **4. Cierre** | Limitaciones y trabajo futuro | 1-2 min |
+
+### Parte 2: Camino de Diseño (Secuencia)
+
+```
+ÉPICAS → HISTORIAS → MOCKUPS → API → CLASES → ARQUITECTURA
+   ↓         ↓           ↓        ↓       ↓          ↓
+criterio-03 criterio-04 criterio-05 criterio-06 criterio-07 criterio-08
+```
+
+### Parte 4: Limitaciones y Trabajo Futuro
+
+| Implementado | Pendiente |
+|--------------|-----------|
+| Flow sandbox | Producción real |
+| JWT básico | Refresh tokens, 2FA |
+| CRUD inventario | Dashboard analytics |
+| Local dev | Deploy Vercel/Railway |
+
+> 📄 **Ver guía completa:** `docs/criterio-11-calidad-video-storytelling.md`
 
 ---
 
@@ -600,7 +635,9 @@ Craft-Beer-Web/
 
 ---
 
-## 📊 Diagramas Disponibles
+## 📊 Diagramas y Documentación Disponibles
+
+### Diagramas (Draw.io)
 
 | Criterio | Archivo | Descripción |
 |----------|---------|-------------|
@@ -612,6 +649,16 @@ Craft-Beer-Web/
 | 8 | `criterio-08-diagrama-componentes.drawio` | Arquitectura |
 | 9 | `criterio-09-stack-tecnologico.drawio` | Stack |
 | B1 | `criterio-B1-web-segura.drawio` | Seguridad |
+
+### Documentación Detallada (Markdown)
+
+| Criterio | Archivo | Contenido |
+|----------|---------|-----------|
+| 4 | `criterio-04-historias-gherkin.md` | US INVEST+3C, Gherkin, DoR |
+| 6 | `criterio-06-api-contracts.md` | Endpoints, request/response |
+| 10 | `criterio-10-integracion-demo.md` | Guía de demo en vivo |
+| 11 | `criterio-11-calidad-video-storytelling.md` | Estructura del video |
+| B1 | `criterio-B1-web-segura.md` | Seguridad implementada |
 
 ---
 
