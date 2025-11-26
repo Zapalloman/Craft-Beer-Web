@@ -541,30 +541,61 @@ npm run seed
 ## 📁 Estructura del Proyecto
 
 ```
-DWM-FINAL/
-├── cerveceria-api/          # Backend NestJS
+Craft-Beer-Web/
+│
+├── cerveceria-api/              # 🖥️ Backend NestJS
 │   ├── src/
-│   │   ├── auth/            # Autenticación
-│   │   ├── usuarios/        # Gestión de usuarios
-│   │   ├── productos/       # Catálogo
-│   │   ├── carrito/         # Carrito de compras
-│   │   ├── pedidos/         # Órdenes
-│   │   ├── pagos/           # Integración Flow
-│   │   ├── valoraciones/    # Reviews
-│   │   └── analytics/       # Estadísticas
+│   │   ├── auth/                # Autenticación JWT
+│   │   ├── usuarios/            # CRUD usuarios + direcciones
+│   │   ├── productos/           # Catálogo de cervezas
+│   │   ├── carrito/             # Gestión del carrito
+│   │   ├── pedidos/             # Órdenes y estados
+│   │   ├── pagos/               # Integración Flow.cl
+│   │   │   └── flow/            # Servicio Flow
+│   │   ├── valoraciones/        # Sistema de reviews
+│   │   ├── analytics/           # Estadísticas (Admin)
+│   │   └── scripts/             # Seeds de datos
+│   ├── .env                     # Variables de entorno
 │   └── package.json
 │
-├── cerveceria-frontend/     # Frontend (HTML/CSS actual)
-│   ├── index.html
-│   └── us01-us10/           # Pantallas por US
+├── cerveceria-frontend/         # 📱 Frontend Next.js 14
+│   ├── app/                     # App Router (páginas)
+│   │   ├── layout.tsx           # Layout principal
+│   │   ├── page.tsx             # Home (/)
+│   │   ├── admin/               # Panel de administración
+│   │   ├── buscar/              # Búsqueda (/buscar)
+│   │   ├── carrito/             # Carrito (/carrito)
+│   │   ├── checkout/            # Checkout (/checkout)
+│   │   ├── login/               # Login (/login)
+│   │   ├── registro/            # Registro (/registro)
+│   │   ├── perfil/              # Perfil (/perfil)
+│   │   ├── pedidos/             # Mis pedidos (/pedidos)
+│   │   └── producto/            # Detalle (/producto/:id)
+│   ├── components/              # Componentes React
+│   │   ├── ui/                  # shadcn/ui components
+│   │   ├── header.tsx           # Navegación principal
+│   │   ├── footer.tsx           # Pie de página
+│   │   ├── product-card.tsx     # Tarjeta de producto
+│   │   ├── product-grid.tsx     # Grid del catálogo
+│   │   ├── cart-content.tsx     # Contenido del carrito
+│   │   ├── checkout-content.tsx # Formulario checkout
+│   │   ├── filter-bar.tsx       # Filtros del catálogo
+│   │   └── ...                  # Más componentes
+│   ├── hooks/                   # Custom hooks
+│   ├── lib/                     # Utilidades
+│   ├── styles/                  # Estilos globales
+│   ├── public/                  # Assets estáticos
+│   └── package.json
 │
-└── md/                    # Documentación
-    ├── criterio-04-*.md
-    ├── criterio-06-*.md
-    ├── criterio-10-*.md
-    └── criterio-B1-*.md
-
-    
+├── docs/                        # 📄 Documentación por criterio
+│   ├── criterio-01-*.md/.drawio
+│   ├── criterio-02-*.md/.drawio
+│   ├── ...
+│   └── criterio-B1-*.md/.drawio
+│
+├── diagrams/                    # 📊 Diagramas Draw.io
+│
+└── README.md                    # Este archivo
 ```
 
 ---
