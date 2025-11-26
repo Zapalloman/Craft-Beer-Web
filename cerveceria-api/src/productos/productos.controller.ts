@@ -10,6 +10,7 @@ import {
   UseInterceptors,
   UploadedFile,
   BadRequestException,
+  Req,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -19,6 +20,7 @@ import { ApiTags, ApiOperation, ApiResponse, ApiQuery, ApiConsumes, ApiBody } fr
 import { ProductosService } from './productos.service';
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
+import { Request } from 'express';
 
 // Configuración de almacenamiento para multer
 const storage = diskStorage({
@@ -76,13 +78,18 @@ export class ProductosController {
       limits: { fileSize: 5 * 1024 * 1024 }, // 5MB máximo
     }),
   )
-  async uploadImagen(@UploadedFile() file: any) {
+  async uploadImagen(@UploadedFile() file: any, @Req() req: Request) {
     if (!file) {
       throw new BadRequestException('No se proporcionó ninguna imagen');
     }
+    // Construir URL base dinámicamente
+    const protocol = req.headers['x-forwarded-proto'] || req.protocol || 'http';
+    const host = req.headers['x-forwarded-host'] || req.get('host') || 'localhost:3000';
+    const baseUrl = `${protocol}://${host}`;
+    
     // Retornar la URL de la imagen
     return {
-      url: `http://localhost:3000/uploads/productos/${file.filename}`,
+      url: `${baseUrl}/uploads/productos/${file.filename}`,
       filename: file.filename,
     };
   }
