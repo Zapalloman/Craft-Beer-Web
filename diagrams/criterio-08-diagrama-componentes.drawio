@@ -310,6 +310,73 @@
         <mxCell id="tech-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=5;spacingLeft=5;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" value="Tecnologias:&#xa;• Node.js 18+&#xa;• TypeScript 5.x&#xa;• NestJS 10.x&#xa;• MongoDB 6.x" vertex="1">
           <mxGeometry height="80" width="120" x="180" y="480" as="geometry" />
         </mxCell>
+        
+        <!-- ERROR HANDLING FLOW SECTION -->
+        <mxCell id="error-handling-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;strokeWidth=2;opacity=30;" value="" vertex="1">
+          <mxGeometry height="200" width="280" x="40" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="error-handling-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#cc0000;" value="FLUJO DE MANEJO DE ERRORES" vertex="1">
+          <mxGeometry height="20" width="240" x="60" y="590" as="geometry" />
+        </mxCell>
+        
+        <!-- Error Flow Layers -->
+        <mxCell id="error-layer-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;align=center;" value="MongoDB&#xa;MongoError / ValidationError" vertex="1">
+          <mxGeometry height="35" width="240" x="60" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="error-arrow-1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#cc0000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="655" as="sourcePoint" />
+            <mxPoint x="180" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="error-layer-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=center;" value="Service Layer&#xa;throw HttpException / NotFoundException" vertex="1">
+          <mxGeometry height="35" width="240" x="60" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="error-arrow-2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#cc0000;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="700" as="sourcePoint" />
+            <mxPoint x="180" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="error-layer-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;align=center;" value="Controller + ValidationPipe&#xa;{ statusCode, message, error }" vertex="1">
+          <mxGeometry height="35" width="240" x="60" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="error-arrow-3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#cc0000;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="745" as="sourcePoint" />
+            <mxPoint x="180" y="755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="error-layer-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;align=center;" value="Frontend (Next.js)&#xa;try/catch → Toast / Alert UI" vertex="1">
+          <mxGeometry height="35" width="240" x="60" y="755" as="geometry" />
+        </mxCell>
+        
+        <!-- HTTP Status Codes Box -->
+        <mxCell id="http-codes-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="200" width="160" x="340" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="http-codes-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" value="Codigos HTTP" vertex="1">
+          <mxGeometry height="20" width="120" x="360" y="590" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="http-400" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;align=left;spacingLeft=5;" value="400 Bad Request&#xa;Validacion fallida (DTO)" vertex="1">
+          <mxGeometry height="30" width="140" x="350" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="http-401" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;align=left;spacingLeft=5;" value="401 Unauthorized&#xa;JWT invalido/expirado" vertex="1">
+          <mxGeometry height="30" width="140" x="350" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="http-404" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;align=left;spacingLeft=5;" value="404 Not Found&#xa;Recurso no existe" vertex="1">
+          <mxGeometry height="30" width="140" x="350" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="http-409" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;align=left;spacingLeft=5;" value="409 Conflict&#xa;Email ya registrado" vertex="1">
+          <mxGeometry height="30" width="140" x="350" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="http-500" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#cc0000;fontSize=9;align=left;spacingLeft=5;" value="500 Internal Error&#xa;Error de servidor/DB" vertex="1">
+          <mxGeometry height="30" width="140" x="350" y="760" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
