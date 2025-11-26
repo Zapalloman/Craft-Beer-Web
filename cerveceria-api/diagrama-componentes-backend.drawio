@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram id="ComponentDiagram" name="Diagrama Componentes Backend">
+    <mxGraphModel dx="1123" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="&lt;h1&gt;ARQUITECTURA BACKEND - CRAFT &amp;amp; BEER&lt;/h1&gt;&lt;p&gt;NestJS + TypeScript + MongoDB&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="20" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;CAPA DE PRESENTACION&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="80" y="100" width="1400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Frontend Web&lt;/b&gt;&lt;br&gt;HTML5 + CSS3 + Bootstrap" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="30" y="50" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Modulo Catalogo&lt;/b&gt;&lt;br&gt;US-01, US-02, US-03" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="3" vertex="1">
+          <mxGeometry x="270" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Modulo Carrito&lt;/b&gt;&lt;br&gt;US-04, US-05" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="3" vertex="1">
+          <mxGeometry x="490" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Modulo Usuario&lt;/b&gt;&lt;br&gt;US-06, US-09" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="3" vertex="1">
+          <mxGeometry x="710" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Modulo Pedidos&lt;/b&gt;&lt;br&gt;US-10" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="3" vertex="1">
+          <mxGeometry x="930" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;Modulo Valoraciones&lt;/b&gt;&lt;br&gt;US-07" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="3" vertex="1">
+          <mxGeometry x="1150" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;CAPA DE SERVICIOS - API REST&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="80" y="340" width="1400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="&lt;&lt;NestJS Module&gt;&gt;&lt;br&gt;&lt;b&gt;AppModule&lt;/b&gt;&lt;br&gt;Gateway Principal&lt;br&gt;Guards + JWT&lt;br&gt;Middleware" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="10" vertex="1">
+          <mxGeometry x="30" y="50" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="&lt;&lt;NestJS Controller&gt;&gt;&lt;br&gt;&lt;b&gt;ProductoController&lt;/b&gt;&lt;br&gt;@Get @Post @Put @Delete&lt;br&gt;/api/productos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="10" vertex="1">
+          <mxGeometry x="270" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="&lt;&lt;NestJS Controller&gt;&gt;&lt;br&gt;&lt;b&gt;CarritoController&lt;/b&gt;&lt;br&gt;@Get @Post @Put @Delete&lt;br&gt;/api/carrito" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="10" vertex="1">
+          <mxGeometry x="490" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="&lt;&lt;NestJS Controller&gt;&gt;&lt;br&gt;&lt;b&gt;UsuarioController&lt;/b&gt;&lt;br&gt;@Post @Put @Get&lt;br&gt;/api/usuarios" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="10" vertex="1">
+          <mxGeometry x="710" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="&lt;&lt;NestJS Controller&gt;&gt;&lt;br&gt;&lt;b&gt;PedidoController&lt;/b&gt;&lt;br&gt;@Get @Post @Put&lt;br&gt;/api/pedidos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="10" vertex="1">
+          <mxGeometry x="930" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="&lt;&lt;NestJS Controller&gt;&gt;&lt;br&gt;&lt;b&gt;ValoracionController&lt;/b&gt;&lt;br&gt;@Get @Post&lt;br&gt;/api/valoraciones" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="10" vertex="1">
+          <mxGeometry x="1150" y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="&lt;b&gt;CAPA DE LOGICA DE NEGOCIO&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="80" y="600" width="1400" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;ProductoService&lt;/b&gt;&lt;br&gt;- buscar()&lt;br&gt;- filtrar()&lt;br&gt;- obtenerDetalle()&lt;br&gt;- actualizarStock()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="70" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;CarritoService&lt;/b&gt;&lt;br&gt;- agregar()&lt;br&gt;- eliminar()&lt;br&gt;- actualizar()&lt;br&gt;- calcularTotal()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="290" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;AuthService&lt;/b&gt;&lt;br&gt;- login()&lt;br&gt;- registro()&lt;br&gt;- validarToken()&lt;br&gt;- hashPassword()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="510" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;PedidoService&lt;/b&gt;&lt;br&gt;- crear()&lt;br&gt;- actualizarEstado()&lt;br&gt;- obtenerHistorial()&lt;br&gt;- cancelar()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="730" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;PagoService (FLOW)&lt;/b&gt;&lt;br&gt;- crearPagoFlow()&lt;br&gt;- confirmarPago()&lt;br&gt;- verificarEstado()&lt;br&gt;- procesarWebhook()&lt;br&gt;- generarComprobante()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="950" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="&lt;&lt;@Injectable()&gt;&gt;&lt;br&gt;&lt;b&gt;ValoracionService&lt;/b&gt;&lt;br&gt;- crear()&lt;br&gt;- obtenerPorProducto()&lt;br&gt;- calcularPromedio()&lt;br&gt;- verificar()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="17" vertex="1">
+          <mxGeometry x="1170" y="50" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="&lt;b&gt;CAPA DE ACCESO A DATOS&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="80" y="880" width="1400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;ProductoModel&lt;/b&gt;&lt;br&gt;@Schema() productos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="70" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;UsuarioModel&lt;/b&gt;&lt;br&gt;@Schema() usuarios" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="290" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;CarritoModel&lt;/b&gt;&lt;br&gt;@Schema() carritos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="510" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;PedidoModel&lt;/b&gt;&lt;br&gt;@Schema() pedidos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="730" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;ValoracionModel&lt;/b&gt;&lt;br&gt;@Schema() valoraciones" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="950" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="&lt;&lt;Mongoose Schema&gt;&gt;&lt;br&gt;&lt;b&gt;PagoModel&lt;/b&gt;&lt;br&gt;@Schema() pagos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="24" vertex="1">
+          <mxGeometry x="1170" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="&lt;&lt;NoSQL Database&gt;&gt;&lt;br&gt;&lt;b&gt;MongoDB&lt;/b&gt;&lt;br&gt;Base de Datos NoSQL&lt;br&gt;Collections: usuarios, productos,&lt;br&gt;carritos, pedidos, valoraciones, pagos" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1120" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" value="HTTP/HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="36" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="22" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="5" target="12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6" target="13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="41" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8" target="15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9" target="16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="500" as="sourcePoint" />
+            <mxPoint x="750" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="43" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="12" target="18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="700" as="sourcePoint" />
+            <mxPoint x="750" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="13" target="19" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="700" as="sourcePoint" />
+            <mxPoint x="750" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="14" target="20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="700" as="sourcePoint" />
+            <mxPoint x="750" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="15" target="21" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="700" as="sourcePoint" />
+            <mxPoint x="750" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="47" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="16" target="23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="700" as="sourcePoint" />
+            <mxPoint x="750" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="48" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="18" target="25" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="19" target="27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="20" target="26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="21" target="28" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="52" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="22" target="30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="23" target="29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="900" as="sourcePoint" />
+            <mxPoint x="750" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="25" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="56" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="27" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="28" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="29" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="30" target="31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="1100" as="sourcePoint" />
+            <mxPoint x="550" y="1050" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1260" y="1190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="66" value="&lt;b&gt;STACK TECNOLOGICO&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Backend:&lt;/b&gt;&lt;br&gt;✅ NestJS (TypeScript)&lt;br&gt;✅ MongoDB + Mongoose&lt;br&gt;✅ JWT Authentication&lt;br&gt;✅ Class-validator&lt;br&gt;✅ bcrypt&lt;br&gt;&lt;br&gt;&lt;b&gt;Patrones NestJS:&lt;/b&gt;&lt;br&gt;- Modulos (@Module)&lt;br&gt;- Controllers (@Controller)&lt;br&gt;- Services (@Injectable)&lt;br&gt;- Guards (Auth)&lt;br&gt;- DTOs (Data Transfer)&lt;br&gt;- Schemas (Mongoose)&lt;br&gt;&lt;br&gt;&lt;b&gt;Arquitectura:&lt;/b&gt;&lt;br&gt;- Clean Architecture&lt;br&gt;- Dependency Injection&lt;br&gt;- API REST" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1120" width="240" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="&lt;b&gt;ESTRUCTURA NESTJS:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;1. Modulos por Feature:&lt;/b&gt;&lt;br&gt;   - ProductoModule&lt;br&gt;   - CarritoModule&lt;br&gt;   - UsuarioModule&lt;br&gt;   - PedidoModule&lt;br&gt;   - AuthModule&lt;br&gt;   - ValoracionModule&lt;br&gt;   - PagosModule (FLOW)&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Guards &amp;amp; Pipes:&lt;/b&gt;&lt;br&gt;   - JwtAuthGuard&lt;br&gt;   - ValidationPipe&lt;br&gt;   - RolesGuard&lt;br&gt;&lt;br&gt;&lt;b&gt;3. Documentacion:&lt;/b&gt;&lt;br&gt;   - @nestjs/swagger&lt;br&gt;   - Swagger UI&lt;br&gt;&lt;br&gt;&lt;b&gt;4. Integraciones:&lt;/b&gt;&lt;br&gt;   - FLOW API (Pagos)&lt;br&gt;   - Webhooks FLOW&lt;br&gt;&lt;br&gt;&lt;b&gt;5. Testing:&lt;/b&gt;&lt;br&gt;   - Jest (integrado)&lt;br&gt;   - E2E tests" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="350" y="1120" width="210" height="350" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
