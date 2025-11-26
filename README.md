@@ -63,7 +63,7 @@ Un sistema de ventas online con:
 CATÁLOGO → DETALLE → CARRITO → CHECKOUT → PAGO → CONFIRMACIÓN
 ```
 
-> 📊 **Mostrar diagrama:** `docs/criterio-01-flujo-ecommerce.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-01-flujo-ecommerce.drawio`
 
 ---
 
@@ -93,7 +93,7 @@ CATÁLOGO → DETALLE → CARRITO → CHECKOUT → PAGO → CONFIRMACIÓN
 | 📦 Packs/Bundles | Combos con descuento |
 | 🎁 Gift cards | Ventas anticipadas |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-02-modelo-negocio.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-02-modelo-negocio.drawio`
 
 ---
 
@@ -119,7 +119,7 @@ CATÁLOGO → DETALLE → CARRITO → CHECKOUT → PAGO → CONFIRMACIÓN
 | **E5:** Administración | ON1 | US08 |
 | **E6:** Seguimiento | ON4 | US10 |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-03-epicas-objetivos.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-03-epicas-objetivos.drawio`
 
 ---
 
@@ -163,7 +163,7 @@ Feature: Checkout y Pago
     And recibe confirmación en pantalla
 ```
 
-> 📄 **Ver detalle completo:** `docs/criterio-04-historias-gherkin.md`
+> 📄 **Ver detalle completo:** `md/criterio-04-historias-gherkin.md`
 
 ---
 
@@ -194,7 +194,7 @@ El sistema maneja 4 estados:
 - ✅ **Error** - Feedback claro
 - ✅ **Sin stock** - Indicador visual
 
-> 📊 **Mostrar diagrama:** `docs/criterio-05-mockups-navegacion.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-05-mockups-navegacion.drawio`
 
 ---
 
@@ -241,7 +241,7 @@ Content-Type: application/json
 }
 ```
 
-> 📄 **Ver contratos completos:** `docs/criterio-06-api-contracts.md`
+> 📄 **Ver contratos completos:** `md/criterio-06-api-contracts.md`
 
 ---
 
@@ -274,7 +274,7 @@ Usuario ─────────── Direccion (1:*)
 | **Pago** | Transacción Flow | Colección |
 | **Valoracion** | Reseña | Colección |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-07-diagrama-clases.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-07-diagrama-clases.drawio`
 
 ---
 
@@ -316,7 +316,7 @@ Usuario ─────────── Direccion (1:*)
 | **ValoracionesModule** | Reviews |
 | **AnalyticsModule** | Estadísticas |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-08-diagrama-componentes.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-08-diagrama-componentes.drawio`
 
 ---
 
@@ -348,7 +348,7 @@ Usuario ─────────── Direccion (1:*)
 | MongoDB | PostgreSQL | Esquema flexible, JSON nativo |
 | Flow.cl | MercadoPago | Más usado en Chile, WebPay |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-09-stack-tecnologico.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-09-stack-tecnologico.drawio`
 
 ---
 
@@ -422,7 +422,7 @@ Usuario ─────────── Direccion (1:*)
 - **Network:** Pestaña Network para ver llamadas API
 - **Console:** Ver logs y posibles errores
 
-> 📄 **Ver guía completa:** `docs/criterio-10-integracion-demo.md`
+> 📄 **Ver guía completa:** `md/criterio-10-integracion-demo.md`
 
 ---
 
@@ -471,7 +471,7 @@ password: string;
 | Fuerza Bruta | bcrypt (costoso) |
 | Credential Stuffing | Mensajes genéricos |
 
-> 📊 **Mostrar diagrama:** `docs/criterio-B1-web-segura.drawio`
+> 📊 **Mostrar diagrama:** `diagrams/criterio-B1-web-segura.drawio`
 
 ---
 
@@ -558,11 +558,13 @@ DWM-FINAL/
 │   ├── index.html
 │   └── us01-us10/           # Pantallas por US
 │
-└── docs/                    # Documentación
-    ├── criterio-01-*.md/.drawio
-    ├── criterio-02-*.md/.drawio
-    ├── ...
-    └── criterio-B1-*.md/.drawio
+└── md/                    # Documentación
+    ├── criterio-04-*.md
+    ├── criterio-06-*.md
+    ├── criterio-10-*.md
+    └── criterio-B1-*.md
+
+    
 ```
 
 ---
