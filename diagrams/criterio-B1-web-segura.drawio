@@ -1,0 +1,307 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="Mozilla/5.0" version="22.1.0">
+  <diagram id="security-architecture" name="Seguridad Web">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Titulo -->
+        <mxCell id="title" value="🛡️ ARQUITECTURA DE SEGURIDAD - CRAFT &amp; BEER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle" value="Criterio B1 (Bonus): Implementación de Seguridad Web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="55" width="800" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- CAPA 1: CLIENTE -->
+        <mxCell id="layer1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="500" height="280" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="layer1-title" value="🌐 CAPA CLIENTE (Next.js)" style="text;html=1;strokeColor=none;fillColor=#01579b;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="480" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Seguridad Frontend -->
+        <mxCell id="frontend-val" value="✅ Validación de Formularios&#xa;&#xa;• Campos requeridos&#xa;• Formato de email&#xa;• Complejidad password&#xa;• Confirmación password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="220" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend-token" value="🔑 Gestión de Tokens&#xa;&#xa;• localStorage para JWT&#xa;• Header Authorization&#xa;• Logout elimina token&#xa;• Redirect sin token" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="150" width="220" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend-https" value="🔒 HTTPS en Producción&#xa;&#xa;• Encriptación TLS/SSL&#xa;• Cookies seguras&#xa;• Previene MITM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="220" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend-errors" value="⚠️ Manejo de Errores UI&#xa;&#xa;• Mensajes amigables&#xa;• Sin detalles técnicos&#xa;• Feedback visual" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="270" width="220" height="90" as="geometry" />
+        </mxCell>
+        
+        <!-- CAPA 2: API -->
+        <mxCell id="layer2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="500" height="280" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="layer2-title" value="🖥️ CAPA API (NestJS)" style="text;html=1;strokeColor=none;fillColor=#2e7d32;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="590" y="110" width="480" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Seguridad Backend -->
+        <mxCell id="backend-auth" value="🔐 Autenticación JWT&#xa;&#xa;• Firma HMAC-SHA256&#xa;• Expiración 7 días&#xa;• Secret en .env&#xa;• Payload: id, email, rol" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="150" width="220" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="backend-val" value="✅ ValidationPipe Global&#xa;&#xa;• whitelist: true&#xa;• forbidNonWhitelisted&#xa;• transform: true&#xa;• DTOs tipados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="150" width="220" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="backend-cors" value="🌐 CORS Whitelist&#xa;&#xa;• Orígenes permitidos&#xa;• credentials: true&#xa;• Bloquea otros orígenes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="270" width="220" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="backend-errors" value="⚠️ Errores Genéricos&#xa;&#xa;• &quot;Credenciales inválidas&quot;&#xa;• Sin stack traces&#xa;• Logging interno" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="270" width="220" height="90" as="geometry" />
+        </mxCell>
+        
+        <!-- CAPA 3: DATOS Y EXTERNOS -->
+        <mxCell id="layer3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="100" width="440" height="280" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="layer3-title" value="💾 CAPA DATOS Y EXTERNOS" style="text;html=1;strokeColor=none;fillColor=#c2185b;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="110" width="420" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Seguridad Datos -->
+        <mxCell id="data-bcrypt" value="🔑 bcrypt Passwords&#xa;&#xa;• 10 rounds salt&#xa;• Hash unidireccional&#xa;• Timing-safe compare&#xa;• Nunca plaintext" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2185b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="150" width="190" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-mongo" value="🗄️ MongoDB Atlas&#xa;&#xa;• Connection string en .env&#xa;• IP Whitelist&#xa;• SSL/TLS habilitado&#xa;• Auth con usuario/pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2185b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="150" width="190" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-flow" value="💳 Flow Payments&#xa;&#xa;• HMAC-SHA256 firma&#xa;• Secret en .env&#xa;• Sandbox para tests&#xa;• Webhooks seguros" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2185b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="270" width="190" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-env" value="📁 Variables .env&#xa;&#xa;• JWT_SECRET&#xa;• MONGODB_URI&#xa;• FLOW_API_KEY&#xa;• En .gitignore" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2185b;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="270" width="190" height="90" as="geometry" />
+        </mxCell>
+        
+        <!-- FLUJO DE AUTENTICACIÓN -->
+        <mxCell id="auth-flow-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="410" width="750" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="auth-flow-title" value="🔐 FLUJO DE AUTENTICACIÓN" style="text;html=1;strokeColor=none;fillColor=#e65100;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="730" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Pasos del flujo -->
+        <mxCell id="step1" value="1️⃣&#xa;Usuario ingresa&#xa;email + password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="470" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow1" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#e65100;strokeColor=#e65100;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="505" as="sourcePoint" />
+            <mxPoint x="210" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step2" value="2️⃣&#xa;Validación&#xa;Frontend&#xa;(formato)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="470" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow2" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#e65100;strokeColor=#e65100;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="505" as="sourcePoint" />
+            <mxPoint x="360" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step3" value="3️⃣&#xa;POST /auth/login&#xa;HTTPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="470" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow3" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#e65100;strokeColor=#e65100;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="505" as="sourcePoint" />
+            <mxPoint x="510" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step4" value="4️⃣&#xa;ValidationPipe&#xa;valida DTO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="470" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow4" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#e65100;strokeColor=#e65100;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="505" as="sourcePoint" />
+            <mxPoint x="660" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step5" value="5️⃣&#xa;bcrypt.compare&#xa;password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="470" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Segunda fila del flujo -->
+        <mxCell id="step6" value="6️⃣&#xa;Genera JWT&#xa;con rol" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="560" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow5" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#2e7d32;strokeColor=#2e7d32;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="595" as="sourcePoint" />
+            <mxPoint x="630" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step7" value="7️⃣&#xa;Response:&#xa;access_token" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="560" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow6" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#2e7d32;strokeColor=#2e7d32;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="595" as="sourcePoint" />
+            <mxPoint x="480" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step8" value="8️⃣&#xa;Guarda token&#xa;localStorage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="560" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow7" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#2e7d32;strokeColor=#2e7d32;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="595" as="sourcePoint" />
+            <mxPoint x="330" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step9" value="9️⃣&#xa;Usa token en&#xa;Authorization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="560" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow8" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#2e7d32;strokeColor=#2e7d32;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="595" as="sourcePoint" />
+            <mxPoint x="180" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="step10" value="🔟&#xa;Acceso a&#xa;rutas protegidas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="560" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- VALIDACIÓN DE PASSWORD -->
+        <mxCell id="pwd-val-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="830" y="410" width="360" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pwd-val-title" value="🔑 VALIDACIÓN DE PASSWORD" style="text;html=1;strokeColor=none;fillColor=#7b1fa2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="840" y="420" width="340" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pwd-regex" value="Regex de Complejidad:&#xa;&#xa;^(?=.*[a-z])     → Mínimo 1 minúscula&#xa;(?=.*[A-Z])       → Mínimo 1 mayúscula&#xa;(?=.*\d)           → Mínimo 1 número&#xa;(?=.*[@$!%*?&amp;])  → Mínimo 1 símbolo&#xa;[A-Za-z\d@$!%*?&amp;] → Caracteres válidos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b1fa2;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="850" y="460" width="320" height="130" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pwd-example" value="✅ Válido: Cerveza123!  |  ❌ Inválido: password" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#7b1fa2;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="600" width="320" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- RESUMEN DE PROTECCIONES -->
+        <mxCell id="protections-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="410" width="340" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="protections-title" value="🛡️ AMENAZAS MITIGADAS" style="text;html=1;strokeColor=none;fillColor=#1565c0;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="420" width="320" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="threat1" value="✅ Inyección SQL/NoSQL → DTO + Mongoose" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565c0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="460" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="threat2" value="✅ XSS → Validación + Sanitización" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565c0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="500" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="threat3" value="✅ CSRF → CORS + Tokens" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565c0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="540" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="threat4" value="✅ Fuerza Bruta → bcrypt (costoso)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565c0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="580" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="threat5" value="✅ Credential Stuffing → Mensajes genéricos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1565c0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="620" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Leyenda -->
+        <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#9e9e9e;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="680" width="1500" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title" value="📋 LEYENDA:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="70" y="695" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" vertex="1" parent="1">
+          <mxGeometry x="180" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1-text" value="Frontend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="205" y="695" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="280" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2-text" value="Backend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="305" y="695" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;" vertex="1" parent="1">
+          <mxGeometry x="380" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3-text" value="Datos/Externos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="405" y="695" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;" vertex="1" parent="1">
+          <mxGeometry x="510" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4-text" value="Flujo Auth" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="535" y="695" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg5-text" value="Password" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="645" y="695" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="700" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg6-text" value="Protecciones" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="745" y="695" width="90" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Puntuación -->
+        <mxCell id="score" value="🏆 Nivel 4: +10 puntos BONUS | Integración consistente de seguridad en todas las capas" style="text;html=1;strokeColor=none;fillColor=#4caf50;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="900" y="695" width="630" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

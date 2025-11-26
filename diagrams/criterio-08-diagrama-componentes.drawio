@@ -1,0 +1,316 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0" version="29.1.1">
+  <diagram name="Diagrama de Componentes" id="component-diagram-craft-beer">
+    <mxGraphModel dx="1381" dy="1765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#1a1a2e;" value="DIAGRAMA DE COMPONENTES E INTEGRACION" vertex="1">
+          <mxGeometry height="35" width="500" x="477.5" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="title-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#666666;" value="Craft and Beer - Arquitectura de 3 Capas" vertex="1">
+          <mxGeometry height="20" width="400" x="550" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;opacity=30;" value="" vertex="1">
+          <mxGeometry height="380" width="320" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-frontend-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#6c8ebf;" value="CAPA DE PRESENTACION" vertex="1">
+          <mxGeometry height="20" width="200" x="100" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-nextjs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="160" width="280" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-nextjs-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" value="Next.js Frontend" vertex="1">
+          <mxGeometry height="25" width="140" x="130" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-nextjs-port" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" value="Puerto 3001" vertex="1">
+          <mxGeometry height="15" width="110" x="145" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-router" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="App Router" vertex="1">
+          <mxGeometry height="30" width="75" x="75" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-components" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="React Components" vertex="1">
+          <mxGeometry height="30" width="95" x="160" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-tailwind" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="TailwindCSS" vertex="1">
+          <mxGeometry height="30" width="65" x="265" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-fetch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="Fetch API" vertex="1">
+          <mxGeometry height="30" width="75" x="75" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-storage" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="LocalStorage (JWT)" vertex="1">
+          <mxGeometry height="30" width="100" x="160" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-hooks" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="Custom Hooks" vertex="1">
+          <mxGeometry height="30" width="60" x="270" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-pages" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#6c8ebf;fontSize=9;" value="Pages: catalogo | detalle | carrito | checkout | perfil | pedidos" vertex="1">
+          <mxGeometry height="20" width="255" x="75" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-browser" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="70" width="280" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" value="Navegador Web" vertex="1">
+          <mxGeometry height="20" width="120" x="140" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-html" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="HTML5" vertex="1">
+          <mxGeometry height="25" width="50" x="75" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-css" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="CSS3" vertex="1">
+          <mxGeometry height="25" width="50" x="135" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-js" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="JavaScript ES6+" vertex="1">
+          <mxGeometry height="25" width="85" x="195" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-responsive" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6c8ebf;fontSize=10;" value="Responsive" vertex="1">
+          <mxGeometry height="25" width="50" x="290" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="user-icon" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="50" width="40" x="180" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="user-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Usuario" vertex="1">
+          <mxGeometry height="15" width="60" x="170" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-backend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;opacity=30;" value="" vertex="1">
+          <mxGeometry height="580" width="440" x="440" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-backend-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#82b366;" value="CAPA DE APLICACION (BACKEND)" vertex="1">
+          <mxGeometry height="20" width="200" x="560" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-nestjs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100" width="400" x="460" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" value="NestJS API Server" vertex="1">
+          <mxGeometry height="25" width="140" x="590" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-port" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" value="Puerto 3000 | /api prefix" vertex="1">
+          <mxGeometry height="15" width="140" x="590" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-cors" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82b366;fontSize=10;" value="CORS Middleware" vertex="1">
+          <mxGeometry height="30" width="90" x="475" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-validation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82b366;fontSize=10;" value="ValidationPipe" vertex="1">
+          <mxGeometry height="30" width="85" x="575" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-swagger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82b366;fontSize=10;" value="Swagger /api/docs" vertex="1">
+          <mxGeometry height="30" width="100" x="670" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nestjs-guards" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82b366;fontSize=10;" value="JWT Guards" vertex="1">
+          <mxGeometry height="30" width="65" x="780" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="modules-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="200" width="400" x="460" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="modules-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#d6b656;" value="Modulos de Negocio" vertex="1">
+          <mxGeometry height="20" width="160" x="580" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="AuthModule&#xa;JWT + bcrypt" vertex="1">
+          <mxGeometry height="40" width="85" x="475" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-usuarios" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="UsuariosModule&#xa;CRUD + Direcciones" vertex="1">
+          <mxGeometry height="40" width="100" x="570" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-productos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="ProductosModule&#xa;Catalogo Cervezas" vertex="1">
+          <mxGeometry height="40" width="95" x="680" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-carrito" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="CarritoModule&#xa;Items + Totales" vertex="1">
+          <mxGeometry height="40" width="60" x="785" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-pedidos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="PedidosModule&#xa;Ordenes + Estados" vertex="1">
+          <mxGeometry height="40" width="95" x="475" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-pagos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="PagosModule&#xa;Flow Integration" vertex="1">
+          <mxGeometry height="40" width="90" x="580" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-valoraciones" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="ValoracionesModule&#xa;Reviews 1-5 estrellas" vertex="1">
+          <mxGeometry height="40" width="105" x="680" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="mod-analytics" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;fontSize=10;align=center;" value="AnalyticsModule&#xa;Estadisticas" vertex="1">
+          <mxGeometry height="40" width="50" x="795" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="pattern-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="45" width="370" x="475" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="pattern-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;" value="Patron por modulo: Controller → Service → Mongoose Schema" vertex="1">
+          <mxGeometry height="25" width="290" x="515" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="services-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="400" x="460" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="services-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#d79b00;" value="Servicios Especializados" vertex="1">
+          <mxGeometry height="20" width="160" x="580" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-jwt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;fontSize=10;align=center;" value="JwtService&#xa;Tokens" vertex="1">
+          <mxGeometry height="35" width="70" x="475" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-bcrypt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;fontSize=10;align=center;" value="bcrypt&#xa;Hashing" vertex="1">
+          <mxGeometry height="35" width="60" x="555" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-flow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;fontSize=10;align=center;" value="FlowService&#xa;Pagos Chile" vertex="1">
+          <mxGeometry height="35" width="75" x="625" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-config" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;fontSize=10;align=center;" value="ConfigService&#xa;Env Vars" vertex="1">
+          <mxGeometry height="35" width="70" x="710" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-mongoose" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;fontSize=10;align=center;" value="Mongoose&#xa;ODM" vertex="1">
+          <mxGeometry height="35" width="55" x="790" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="db-container" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="90" width="200" x="460" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="db-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#9673a6;" value="MongoDB Atlas" vertex="1">
+          <mxGeometry height="20" width="110" x="505" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="db-icon" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="45" width="40" x="480" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="db-collections" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Collections:&#xa;usuarios, productos&#xa;carritos, pedidos&#xa;pagos, valoraciones" vertex="1">
+          <mxGeometry height="55" width="120" x="530" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;opacity=30;" value="" vertex="1">
+          <mxGeometry height="200" width="200" x="960" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="layer-external-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#b85450;" value="SERVICIOS EXTERNOS" vertex="1">
+          <mxGeometry height="20" width="140" x="990" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-flow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="140" width="160" x="980" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" value="Flow.cl" vertex="1">
+          <mxGeometry height="25" width="60" x="1030" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" value="Pasarela de Pagos Chile" vertex="1">
+          <mxGeometry height="15" width="120" x="1000" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-sandbox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#b85450;fontSize=10;" value="Sandbox Mode" vertex="1">
+          <mxGeometry height="25" width="70" x="995" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-prod" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#b85450;fontSize=10;" value="Production" vertex="1">
+          <mxGeometry height="25" width="55" x="1075" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-methods" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" value="Webpay | Redcompra&#xa;Multicaja | Mach" vertex="1">
+          <mxGeometry height="30" width="120" x="1000" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-hmac" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;strokeColor=#b85450;fontSize=9;" value="HMAC-SHA256 Signature" vertex="1">
+          <mxGeometry height="20" width="120" x="1000" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-frontend-backend" edge="1" parent="1" source="comp-nextjs" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="comp-nestjs" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="450" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-frontend-backend-label" parent="1" style="text;html=1;strokeColor=none;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;" value="REST/JSON&#xa;+ JWT Token" vertex="1">
+          <mxGeometry height="30" width="75" x="365" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-backend-db" edge="1" parent="1" source="services-container" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="db-container" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="550" as="sourcePoint" />
+            <mxPoint x="660" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-backend-db-label" parent="1" style="text;html=1;strokeColor=none;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;fontColor=#9673a6;" value="Mongoose" vertex="1">
+          <mxGeometry height="15" width="55" x="565" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-backend-flow" edge="1" parent="1" source="comp-nestjs" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="comp-flow" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="870" y="200" as="sourcePoint" />
+            <mxPoint x="980" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-backend-flow-label" parent="1" style="text;html=1;strokeColor=none;fillColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;fontStyle=1;fontColor=#b85450;" value="HTTPS&#xa;Webhooks" vertex="1">
+          <mxGeometry height="30" width="60" x="895" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-user-browser" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#6c8ebf;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="200" y="390" as="sourcePoint" />
+            <mxPoint x="200" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-browser-nextjs" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=1;strokeColor=#6c8ebf;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="200" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="240" width="200" x="960" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" value="LEYENDA" vertex="1">
+          <mxGeometry height="20" width="60" x="1030" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-blue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-blue-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Frontend (Cliente)" vertex="1">
+          <mxGeometry height="20" width="100" x="1005" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-green" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-green-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Backend (NestJS)" vertex="1">
+          <mxGeometry height="20" width="100" x="1005" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-yellow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-yellow-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Modulos de Negocio" vertex="1">
+          <mxGeometry height="20" width="110" x="1005" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-orange" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-orange-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Servicios" vertex="1">
+          <mxGeometry height="20" width="100" x="1005" y="417" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-purple" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-purple-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Base de Datos" vertex="1">
+          <mxGeometry height="20" width="100" x="1005" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-red" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="975" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-red-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" value="Servicios Externos" vertex="1">
+          <mxGeometry height="20" width="110" x="1005" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-sep" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#999999;" value="" vertex="1">
+          <mxGeometry height="8" width="170" x="975" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow1" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="975" y="518" as="sourcePoint" />
+            <mxPoint x="1005" y="518" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow1-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" value="REST bidireccional" vertex="1">
+          <mxGeometry height="15" width="100" x="1010" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="975" y="538" as="sourcePoint" />
+            <mxPoint x="1005" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow2-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" value="HTTPS + Webhook" vertex="1">
+          <mxGeometry height="15" width="100" x="1010" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-sequence-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="90" width="160" x="700" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-sequence-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" value="Flujo de Compra" vertex="1">
+          <mxGeometry height="15" width="90" x="735" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-sequence-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" value="1. Frontend → API: crear pedido&#xa;2. API → MongoDB: persistir&#xa;3. API → Flow: crear pago&#xa;4. Flow → API: webhook&#xa;5. API → MongoDB: confirmar" vertex="1">
+          <mxGeometry height="60" width="140" x="710" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="security-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=5;spacingLeft=5;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" value="Seguridad:&#xa;• CORS whitelist&#xa;• JWT en headers&#xa;• bcrypt passwords&#xa;• HTTPS en prod" vertex="1">
+          <mxGeometry height="80" width="120" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingTop=5;spacingLeft=5;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" value="Tecnologias:&#xa;• Node.js 18+&#xa;• TypeScript 5.x&#xa;• NestJS 10.x&#xa;• MongoDB 6.x" vertex="1">
+          <mxGeometry height="80" width="120" x="180" y="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
