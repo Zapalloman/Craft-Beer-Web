@@ -43,8 +43,10 @@ async function bootstrap() {
     credentials: true,
   });
 
-  // Prefijo global para todas las rutas
-  app.setGlobalPrefix('api');
+  // Prefijo global para todas las rutas (excepto health check)
+  app.setGlobalPrefix('api', {
+    exclude: ['/'],
+  });
 
   // Validación automática de DTOs
   app.useGlobalPipes(
