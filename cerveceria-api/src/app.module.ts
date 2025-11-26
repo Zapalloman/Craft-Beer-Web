@@ -9,6 +9,7 @@ import { PedidosModule } from './pedidos/pedidos.module';
 import { ValoracionesModule } from './valoraciones/valoraciones.module';
 import { PagosModule } from './pagos/pagos.module';
 import { AnalyticsModule } from './analytics/analytics.module';
+import { HealthController } from './health.controller';
 
 @Module({
   imports: [
@@ -39,5 +40,6 @@ import { AnalyticsModule } from './analytics/analytics.module';
     PagosModule,
     AnalyticsModule,
   ],
+  controllers: [HealthController],
 })
 export class AppModule {}
