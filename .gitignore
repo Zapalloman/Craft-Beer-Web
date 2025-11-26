@@ -12,6 +12,8 @@ node_modules/
 **/build/
 .env*
 
+# Archivo índice local (no subir a git)
+index.md
 
 # Logs
 npm-debug.log*
