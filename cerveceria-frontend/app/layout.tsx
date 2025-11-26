@@ -13,22 +13,9 @@ export const metadata: Metadata = {
   title: "Craft & Beer - Cervezas Artesanales Premium",
   description:
     "Descubre nuestra seleccion de cervezas artesanales premium, elaboradas con los mejores ingredientes y pasion por la tradicion cervecera.",
-  generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
     apple: "/apple-icon.png",
   },
 }
