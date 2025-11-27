@@ -54,10 +54,10 @@ export class PagosService {
         currency: 'CLP',
         amount: monto,
         email: email,
-        // Webhook de confirmación va al backend
+        // Webhook de confirmación va al backend (POST desde Flow)
         urlConfirmation: `${backendUrl}/api/pagos/flow/confirm`,
-        // URL de retorno va al FRONTEND para mostrar confirmación al usuario
-        urlReturn: `${frontendUrl}/checkout/confirmacion?pedido=${pedidoId}`,
+        // URL de retorno también va al backend, que luego redirige al frontend
+        urlReturn: `${backendUrl}/api/pagos/flow/return`,
         optional: pedidoId,
       });
 

@@ -56,15 +56,21 @@ export class PagosController {
     }
   }
 
-  @Get('flow/return')
-  @ApiOperation({ summary: 'URL de retorno desde FLOW (usuario)' })
-  @ApiQuery({ name: 'token', required: true })
-  @Redirect()
-  async retornoFlow(@Query('token') token: string) {
+  // Método compartido para procesar retorno de Flow
+  private async processFlowReturn(token: string) {
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3001';
     
     try {
+      if (!token) {
+        console.log('Flow return: No token provided');
+        return { 
+          url: `${frontendUrl}/checkout?status=error&reason=No token`,
+          statusCode: 302,
+        };
+      }
+
       const pago = await this.pagosService.confirmarPagoFlow(token);
+      console.log(`Flow return: Pago ${pago._id} - Estado: ${pago.estado}`);
       
       if (pago.estado === 'Pagado') {
         return { 
@@ -73,18 +79,33 @@ export class PagosController {
         };
       } else {
         return { 
-          url: `${frontendUrl}/checkout?status=error&reason=${pago.estado}`,
+          url: `${frontendUrl}/checkout/confirmacion?pedido=${pago.pedidoId}&status=pending`,
           statusCode: 302,
         };
       }
     } catch (error) {
       console.error('Error en retorno Flow:', error.message);
-      // Si hay error, redirigir al checkout con mensaje de error
       return { 
-        url: `${frontendUrl}/checkout?status=error&reason=Error al procesar pago`,
+        url: `${frontendUrl}/checkout?status=error&reason=Error`,
         statusCode: 302,
       };
     }
+  }
+
+  @Get('flow/return')
+  @ApiOperation({ summary: 'URL de retorno desde FLOW (GET)' })
+  @ApiQuery({ name: 'token', required: false })
+  @Redirect()
+  async retornoFlowGet(@Query('token') token: string) {
+    return this.processFlowReturn(token);
+  }
+
+  @Post('flow/return')
+  @ApiOperation({ summary: 'URL de retorno desde FLOW (POST)' })
+  @Redirect()
+  async retornoFlowPost(@Body() body: { token?: string }, @Query('token') queryToken: string) {
+    const token = body?.token || queryToken;
+    return this.processFlowReturn(token);
   }
 
   @Get('estado/:pagoId')
