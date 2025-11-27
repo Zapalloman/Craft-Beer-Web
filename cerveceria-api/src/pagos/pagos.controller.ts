@@ -1,5 +1,6 @@
-import { Controller, Post, Get, Body, Param, Query, Redirect } from '@nestjs/common';
+import { Controller, Post, Get, Body, Param, Query, Res } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiQuery } from '@nestjs/swagger';
+import { Response } from 'express';
 import { PagosService } from './pagos.service';
 
 @ApiTags('pagos')
@@ -57,55 +58,47 @@ export class PagosController {
   }
 
   // Método compartido para procesar retorno de Flow
-  private async processFlowReturn(token: string) {
+  private async processFlowReturn(token: string, res: Response) {
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3001';
     
-    try {
-      if (!token) {
-        console.log('Flow return: No token provided');
-        return { 
-          url: `${frontendUrl}/checkout?status=error&reason=No token`,
-          statusCode: 302,
-        };
-      }
+    console.log(`Flow return: Procesando token: ${token ? token.substring(0, 20) + '...' : 'NO TOKEN'}`);
+    
+    if (!token) {
+      console.log('Flow return: No token provided, redirecting to error');
+      return res.redirect(`${frontendUrl}/checkout?status=error&reason=no-token`);
+    }
 
+    try {
       const pago = await this.pagosService.confirmarPagoFlow(token);
-      console.log(`Flow return: Pago ${pago._id} - Estado: ${pago.estado}`);
+      console.log(`Flow return: Pago ${pago._id} - Estado: ${pago.estado} - PedidoId: ${pago.pedidoId}`);
       
       if (pago.estado === 'Pagado') {
-        return { 
-          url: `${frontendUrl}/checkout/confirmacion?pedido=${pago.pedidoId}&status=success`,
-          statusCode: 302,
-        };
+        return res.redirect(`${frontendUrl}/checkout/confirmacion?pedido=${pago.pedidoId}&status=success`);
       } else {
-        return { 
-          url: `${frontendUrl}/checkout/confirmacion?pedido=${pago.pedidoId}&status=pending`,
-          statusCode: 302,
-        };
+        return res.redirect(`${frontendUrl}/checkout/confirmacion?pedido=${pago.pedidoId}&status=pending`);
       }
     } catch (error) {
       console.error('Error en retorno Flow:', error.message);
-      return { 
-        url: `${frontendUrl}/checkout?status=error&reason=Error`,
-        statusCode: 302,
-      };
+      return res.redirect(`${frontendUrl}/checkout?status=error&reason=processing-error`);
     }
   }
 
   @Get('flow/return')
   @ApiOperation({ summary: 'URL de retorno desde FLOW (GET)' })
   @ApiQuery({ name: 'token', required: false })
-  @Redirect()
-  async retornoFlowGet(@Query('token') token: string) {
-    return this.processFlowReturn(token);
+  async retornoFlowGet(@Query('token') token: string, @Res() res: Response) {
+    return this.processFlowReturn(token, res);
   }
 
   @Post('flow/return')
   @ApiOperation({ summary: 'URL de retorno desde FLOW (POST)' })
-  @Redirect()
-  async retornoFlowPost(@Body() body: { token?: string }, @Query('token') queryToken: string) {
+  async retornoFlowPost(
+    @Body() body: { token?: string }, 
+    @Query('token') queryToken: string,
+    @Res() res: Response
+  ) {
     const token = body?.token || queryToken;
-    return this.processFlowReturn(token);
+    return this.processFlowReturn(token, res);
   }
 
   @Get('estado/:pagoId')
