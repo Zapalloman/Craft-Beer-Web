@@ -37,6 +37,9 @@ async function bootstrap() {
         'http://localhost:3001',
         'http://127.0.0.1:3000',
         'http://127.0.0.1:3001',
+        // Flow payment gateway
+        'https://sandbox.flow.cl',
+        'https://www.flow.cl',
       ];
       
       // Agregar origins de producción desde variable de entorno
@@ -45,7 +48,7 @@ async function bootstrap() {
         allowedOrigins.push(...prodOrigin.split(',').map(o => o.trim()));
       }
       
-      // Permitir peticiones sin origin (como Postman) o desde origins permitidos
+      // Permitir peticiones sin origin (como Postman, redirects) o desde origins permitidos
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
