@@ -28,8 +28,24 @@ export class PagosService {
       this.logger.log(`Creando pago FLOW para pedido: ${pedidoId}`);
 
       const numeroComprobante = `FLOW-${Date.now()}`;
-      const backendUrl = this.configService.get<string>('APP_URL') || 'http://localhost:3000';
-      const frontendUrl = this.configService.get<string>('FRONTEND_URL') || 'http://localhost:3001';
+      
+      // Obtener URLs de entorno con valores por defecto
+      let backendUrl = this.configService.get<string>('APP_URL') || 'http://localhost:3000';
+      let frontendUrl = this.configService.get<string>('FRONTEND_URL') || 'http://localhost:3001';
+      
+      // Asegurar que las URLs tengan protocolo https en producción
+      if (backendUrl && !backendUrl.startsWith('http')) {
+        backendUrl = `https://${backendUrl}`;
+      }
+      if (frontendUrl && !frontendUrl.startsWith('http')) {
+        frontendUrl = `https://${frontendUrl}`;
+      }
+      
+      // Remover trailing slash si existe
+      backendUrl = backendUrl.replace(/\/$/, '');
+      frontendUrl = frontendUrl.replace(/\/$/, '');
+      
+      this.logger.log(`URLs configuradas - Backend: ${backendUrl}, Frontend: ${frontendUrl}`);
 
       // Crear pago en FLOW
       const flowResponse = await this.flowService.createPayment({
@@ -38,7 +54,7 @@ export class PagosService {
         currency: 'CLP',
         amount: monto,
         email: email,
-        // Webhook de confirmación va al backend (aunque no funcione en localhost)
+        // Webhook de confirmación va al backend
         urlConfirmation: `${backendUrl}/api/pagos/flow/confirm`,
         // URL de retorno va al FRONTEND para mostrar confirmación al usuario
         urlReturn: `${frontendUrl}/checkout/confirmacion?pedido=${pedidoId}`,
