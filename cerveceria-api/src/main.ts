@@ -4,12 +4,25 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
+import { existsSync, mkdirSync } from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
+  // Ruta de uploads - usar /app/uploads en producción (Railway Volume) o local
+  const uploadsPath = process.env.NODE_ENV === 'production' 
+    ? '/app/uploads'
+    : join(__dirname, '..', 'uploads');
+  
+  // Crear carpeta si no existe
+  if (!existsSync(uploadsPath)) {
+    mkdirSync(uploadsPath, { recursive: true });
+  }
+  
+  console.log(`📁 Uploads path: ${uploadsPath}`);
+  
   // Servir archivos estáticos (imágenes de productos)
-  app.useStaticAssets(join(__dirname, '..', 'uploads'), {
+  app.useStaticAssets(uploadsPath, {
     prefix: '/uploads/',
   });
 

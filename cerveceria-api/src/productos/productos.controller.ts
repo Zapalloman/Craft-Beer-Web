@@ -22,10 +22,18 @@ import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
 import { Request } from 'express';
 
+// Función para obtener la ruta de uploads
+const getUploadsPath = () => {
+  const isProduction = process.env.NODE_ENV === 'production';
+  return isProduction 
+    ? '/app/uploads/productos'
+    : join(__dirname, '..', '..', 'uploads', 'productos');
+};
+
 // Configuración de almacenamiento para multer
 const storage = diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = join(__dirname, '..', '..', 'uploads', 'productos');
+    const uploadPath = getUploadsPath();
     // Crear carpeta si no existe
     if (!existsSync(uploadPath)) {
       mkdirSync(uploadPath, { recursive: true });
@@ -47,7 +55,6 @@ const imageFileFilter = (req: any, file: any, cb: any) => {
   }
   cb(null, true);
 };
-
 @ApiTags('productos')
 @Controller('productos')
 export class ProductosController {
